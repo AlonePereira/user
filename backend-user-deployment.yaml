@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: backend-user
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend-user
+  template:
+    metadata:
+      labels:
+        app: backend-user
+    spec:
+      containers:
+      - name: backend-user
+        image: alonesilva/backend-user:alpha
+        ports:
+        - containerPort: 3020
+        env:
+        - name: DEMO_GREETINGNODE_ENV
+          value: "staging"
+        - name: MONGO_URI
+          value: "mongodb://dbuser:dbuser18@ds231133.mlab.com:31133/suaaplicacao-dev"
+        - name: SECRET_OR_KEY
+          value: "b00tc4mp18"
