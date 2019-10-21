@@ -20,9 +20,9 @@ spec:
         ports:
         - containerPort: 3020
         env:
-        - name: DEMO_GREETINGNODE_ENV
+        - name: NODE_ENV
           value: "staging"
         - name: MONGO_URI
-          value: "mongodb://dbuser:dbuser18@ds231133.mlab.com:31133/suaaplicacao-dev"
+          value: "mongodb://dbuser:root@192.168.189.47:30021/questcode"
         - name: SECRET_OR_KEY
-          value: "b00tc4mp18"
+          value: "root"
