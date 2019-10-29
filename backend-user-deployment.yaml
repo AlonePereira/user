@@ -23,6 +23,6 @@ spec:
         - name: NODE_ENV
           value: "staging"
         - name: MONGO_URI
-          value: "mongodb://dbuser:root@192.168.189.47:30021/questcode"
+          value: "mongodb://192.168.189.47:30021/questcode"
         - name: SECRET_OR_KEY
           value: "root"
