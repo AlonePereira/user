@@ -26,6 +26,12 @@ spec:
               name: questcode
               key: NODE_ENV
         - name: MONGO_URI
-          value: "mongodb://192.168.189.47:30021/questcode"
+          valueFrom:
+            secretKeyRef:
+              name: questcode
+              key: MONGO_URI
         - name: SECRET_OR_KEY
-          value: "root"
+          valueFrom:
+            secretKeyRef:
+              name: questcode
+              key: SECRET_OR_KEY
